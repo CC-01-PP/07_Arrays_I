@@ -139,14 +139,25 @@ function getSentence (arr) {
 /*** 01b. Funktionalität mit Array 2 */
 // Transponierung: untereinander ---> neveneinander
 
-// output(getSentenceArr2(["Ich", "bin", "die", "coole", "Maxine", "Mützerich"]));
+output(getSentenceArr2(["Ich", "bin", "die", "coole", "Maxine", "Mützerich"]));
 function getSentenceArr2(arr) {
     const gap   = " ";
     const punct = ".";
+    let str = "";
     
-    let str;
     for (let i = 0; i < arr.length; i++) {
-        output(arr[i]); // i als Index des Arrays  
+
+        // wenn ich noch NICHT das letzte Element habe --> gap
+        // wenn ich das letzte Element habe --> punkt
+        // a = a + 1 || a += 1
+
+        str = str + arr[i] + gap;
+        // output(arr[i]); // i als Index des Arrays  
     }
+
+    // 
+    // return  str + punct;
+
     return str;
+
 }
