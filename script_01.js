@@ -155,7 +155,7 @@ function getSentenceArr2(arr) {
         // output(arr[i]); // i als Index des Arrays  
     }
 
-    // 
+    // str = str.trim();
     // return  str + punct;
 
     return str;
