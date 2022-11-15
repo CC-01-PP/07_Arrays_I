@@ -41,10 +41,53 @@
 // }
 
 /*** 02b. For-Schleife für Array-Index (Iteration) */
-let arr = ["Ich", "bin", "die", "coole", "Maxine", "Mützerich"];
-for (let i = 0; i < arr.length; i++) {
-    output("index i: " + i + " " + arr[i]); // i als Index des Arrays
-}
+// let arr = ["Ich", "bin", "die", "coole", "Maxine", "Mützerich"];
+// for (let i = 0; i < arr.length; i++) {
+//     output("index i: " + i + " " + arr[i]); // i als Index des Arrays
+// }
+
+/*********** Überlegungen - Transportierung  *************/
+
+/*
+1. Einer Variablen kann Ihr eigener Wert zugewiesen werden.
+Solange die Variable existiert, bleibt dieser erhalten.
+hier: Aufsummierung
+*/
+
+/* Zu "Fuß" - DRY !!! */
+// let a = 0; // Anfangswert
+// output("inhalt von a: " + a);
+// a = a + 1;  // a = 0 + 1
+// output("inhalt von a: " + a);
+// a = a + 1;  // a = 1 + 1
+// output("inhalt von a: " + a);
+// a = a + 1;  // a = 2 + 1
+// output("inhalt von a: " + a);
+
+/* Besser: mit FOR-Schleife */
+// let a = 0 // Anfangswert
+// for (let i = 0; i < 10; i++) {
+//     output("in der loop: " + a);
+//     a = a + 1;
+// }
+// output("nach der loop: " + a)
+
+
+/*
+1a. Einer Variablen kann Ihr eigener Wert zugewiesen werden
+Solange die Variable existiert, bleibt dieser erhalten
+hier: Verkettung eines Strings // Transponierung
+*/
+
+// let str = "";
+// let gap = " ";
+// let addStr = "Test";
+// for (let i = 0; i <= 5; i++) {
+//     output("in der loop: " + str);
+//     // a = a + 1;  // Numerik
+//     str = str + addStr + gap // Text
+// }
+// output("nach der loop: " + str);
 
 
 /*** 01. Funktionalität mit Einzelparametern */
@@ -90,5 +133,20 @@ function getSentence (arr) {
                     arr[4] + gap +
                     arr[5] +
                     punct;
+    return str;
+}
+
+/*** 01b. Funktionalität mit Array 2 */
+// Transponierung: untereinander ---> neveneinander
+
+// output(getSentenceArr2(["Ich", "bin", "die", "coole", "Maxine", "Mützerich"]));
+function getSentenceArr2(arr) {
+    const gap   = " ";
+    const punct = ".";
+    
+    let str;
+    for (let i = 0; i < arr.length; i++) {
+        output(arr[i]); // i als Index des Arrays  
+    }
     return str;
 }
