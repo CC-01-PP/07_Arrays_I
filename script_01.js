@@ -144,20 +144,29 @@ function getSentenceArr2(arr) {
     const gap   = " ";
     const punct = ".";
     let str = "";
-    
-    for (let i = 0; i < arr.length; i++) {
 
+    for (let i = 0; i < arr.length; i++) {
         // wenn ich noch NICHT das letzte Element habe --> gap
         // wenn ich das letzte Element habe --> punkt
         // a = a + 1 || a += 1
 
-        str = str + arr[i] + gap;
-        // output(arr[i]); // i als Index des Arrays  
+        // if (i < arr.lenghth - 1)
+    if (i != arr.length -1) {
+        str += arr[i] + gap;
+    } else {
+        str += arr[i] + punct;
     }
-
-    // str = str.trim();
-    // return  str + punct;
-
+    }
     return str;
-
 }
+    
+//     for (let i = 0; i < arr.length; i++) {
+
+//         str = str + arr[i] + gap;
+//         // output(arr[i]); // i als Index des Arrays  
+//     }
+
+//     str = str.trim();
+//     return  str + punct;
+
+// }
